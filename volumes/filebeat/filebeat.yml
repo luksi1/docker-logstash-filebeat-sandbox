@@ -1,0 +1,12 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - /logs/*
+#  json.keys_under_root: true
+#  json.message_key: bsLogMsg
+#  multiline.pattern: '(INFO|DEBUG|ERROR|WARN\s{2})?\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2},\d{3}'
+#  multiline.negate: true
+#  multiline.match: after
+output.logstash:
+  hosts: ["logstash:5044"]
+
