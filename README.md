@@ -12,4 +12,5 @@ This project will use a filebeat and logstash image to send a log file to a logs
 ## Up and running
 1. Create a log file under volumes/logs/
 2. Create a logstash configuration to test under volumes/logstash-test.conf
+3. Run: "sudo chown root:root volumes/filebeat/filebeat.yml"
 3. mvn docker:run
